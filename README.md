@@ -5,7 +5,16 @@
 
 ### Entre em contato comigo
 <br>
-
+### @Bean
+	public JpaVendorAdapter jpaVendorAdapter() {
+		HibernateJpaVendorAdapter adapter = new HibernateJpaVendorAdapter();
+		adapter.setDatabase(Database.MYSQL);
+		adapter.setDatabasePlatform("org.hibernate.dialect.MySQL8Dialect");
+		adapter.setPrepareConnection(true);
+		adapter.setGenerateDdl(true);
+		adapter.setShowSql(true);
+		return adapter;
+	}
 
 [![Blog](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/hellen-c-165ba413b/) 
 [![Blog](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://api.whatsapp.com/send?phone=5511972543274&text=Ol%C3%A1,%20me%20chamo%20Hellen%20Cristina)
